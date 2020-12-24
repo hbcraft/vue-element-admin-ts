@@ -7,19 +7,29 @@
         <code v-text="'<el-button>'"></code>
         below
       </p>
-      <el-button>el-button</el-button>
+      <el-button @click="a">{{$t('el-button')}}</el-button>
     </div>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 
-export default {
+import { Component, Vue } from 'vue-property-decorator'
+@Component({
   name: 'app',
   components: {
     HelloWorld
+  }
+})
+export default class App extends Vue {
+  a () {
+    if (this.$i18n.locale === 'zh-cn') {
+      this.$setLang('en-us')
+    } else {
+      this.$setLang('zh-cn')
+    }
   }
 }
 </script>
