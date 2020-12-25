@@ -16,6 +16,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import HelloWorld from './components/HelloWorld.vue'
+import axios from './plugins/axios'
 
 @Component({
   name: 'app',
@@ -30,6 +31,12 @@ export default class App extends Vue {
     } else {
       this.$setLang('zh-cn')
     }
+  }
+
+  mounted () {
+    axios.get('/mock/login').then((data) => {
+      console.log(data)
+    })
   }
 }
 </script>
