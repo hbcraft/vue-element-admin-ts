@@ -9,11 +9,11 @@ import {
   Message
 } from 'element-ui'
 
-import Card from '@/components/el-card/index'
+import Card from '@/components/el-card/index.vue'
+Vue.component('el-card', Card)
 
 Vue.use(Button)
 Vue.use(Col)
-Vue.use(Card)
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Input)
