@@ -1,20 +1,15 @@
-import Axios, { AxiosRequestConfig } from 'axios'
-
-// Full config:  https://github.com/axios/axios#request-config
-// axios.defaults.baseURL = process.env.baseURL || process.env.apiUrl || '';
-// axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
-// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+import Axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { Message } from 'element-ui'
 
 const config: AxiosRequestConfig = {
   baseURL: process.env.VUE_APP_BASE_API,
-  timeout: 10000 // Timeout
-  // withCredentials: true, // Check cross-site Access-Control
+  timeout: 10000
 }
 
 const axios = Axios.create(config)
 
 axios.interceptors.request.use(
-  (config) => {
+  (config: AxiosRequestConfig) => {
     // Do something before request is sent
     return config
   },
@@ -26,18 +21,17 @@ axios.interceptors.request.use(
 
 // Add a response interceptor
 axios.interceptors.response.use(
-  (response) => {
-    // Do something with response data
-    console.log(response)
-    switch (response.data.code) {
-      case 200:
-        console.log('成功')
-        break
-      default:
-        console.log('默认')
-        break
+  (response: AxiosResponse<ResponseWrap>) => {
+    const res = response.data
+    if (res.code !== 200) {
+      Message({
+        message: res.message || 'Error',
+        type: 'error',
+        duration: 5 * 1000
+      })
+      return Promise.reject(new Error(res.message || 'Error'))
     }
-    return response
+    return res
   },
   (error) => {
     // Do something with response error

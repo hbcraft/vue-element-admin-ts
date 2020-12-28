@@ -1,17 +1,15 @@
 <template>
-  <div id="app" class="fill-height">
+  <div id="layout">
     <router-view />
   </div>
 </template>
 
-<script lang="ts">
+<script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator'
-
 @Component({
-  name: 'app'
+  name: 'Layout'
 })
-export default class App extends Vue {
-}
+export default class Layout extends Vue {}
 </script>
 
 <style>

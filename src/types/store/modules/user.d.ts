@@ -1,0 +1,3 @@
+interface UserState {
+  token: string;
+}

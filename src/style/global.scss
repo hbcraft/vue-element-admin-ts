@@ -1,0 +1,79 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+.fill-height {
+  height: 100%;
+}
+
+.fill-width {
+  width: 100%;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex.jc-center {
+  justify-content: center;
+}
+
+.d-flex.ai-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// 生成margin
+@for $i from 0 through 5 {
+  .ma-#{$i * 5} {
+    margin: 5px * $i !important;
+  }
+
+  .ml-#{$i * 5} {
+    margin-left: 5px * $i !important;
+  }
+
+  .mr-#{$i * 5} {
+    margin-right: 5px * $i !important;
+  }
+
+  .mt-#{$i * 5} {
+    margin-top: 5px * $i !important;
+  }
+
+  .mb-#{$i * 5} {
+    margin-bottom: 5px * $i !important;
+  }
+
+  .mx-#{$i * 5} {
+    margin-left: 5px * $i !important;
+    margin-right: 5px * $i !important;
+  }
+
+  .my-#{$i * 5} {
+    margin-top: 5px * $i !important;
+    margin-right: 5px * $i !important;
+  }
+}
+
+@for $i from 1 through 10 {
+  .w-#{$i * 50} {
+    width: 50px * $i;
+  }
+}

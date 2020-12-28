@@ -1,0 +1,3 @@
+interface SystemState {
+  lang: string;
+}
