@@ -1,0 +1,13 @@
+// scss变量
+
+// 登录页
+// 登录页的背景颜色
+$loginPageBackgroundColor: #77ccee;
+
+// aside
+$asideWidth: 210px;
+
+:export {
+  loginPageBackgroundColor: $loginPageBackgroundColor;
+  asideWidth: $asideWidth;
+}

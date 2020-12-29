@@ -8,12 +8,7 @@
       }"
     >
       <div class="login-img">
-        <img
-          src="@/assets/images/login-img.png"
-          alt=""
-          width="100%"
-          height="100%"
-        />
+        <el-image :src="loginImg" style="width: 500px; height: 440px" />
       </div>
       <div class="login-form ml-20 w-300">
         <h2 class="text-center mb-20">系统登录</h2>
@@ -59,6 +54,8 @@ import { Form } from 'element-ui'
 export default class Login extends Vue {
   @Ref() readonly LoginForm!: Form
 
+  loginImg = require('@/assets/images/login-img.png')
+
   loginFormLoading = false
 
   loginForm = {
@@ -96,7 +93,8 @@ export default class Login extends Vue {
 </script>
 
 <style lang="scss" scoped>
+@import "~@/style/variables.scss";
 #login {
-  background-color: #77ccee;
+  background-color: $loginPageBackgroundColor;
 }
 </style>
