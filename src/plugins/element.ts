@@ -9,8 +9,7 @@ import {
   Message
 } from 'element-ui'
 
-import Card from '@/components/el-card/index.vue'
-Vue.component('el-card', Card)
+// 已在@/component/global中挂载自定义全局组件el-card
 
 Vue.use(Button)
 Vue.use(Col)
