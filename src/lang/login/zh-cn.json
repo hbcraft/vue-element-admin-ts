@@ -1,0 +1,16 @@
+{
+  "systemLogin": "系统登录",
+  "username": "用户名",
+  "password": "密码",
+  "usernamePlaceholder": "请输入用户名",
+  "passwordPlaceholder": "请输入密码",
+  "login": "登录",
+  "error-tip": {
+    "username": {
+      "required": "用户名不能为空"
+    },
+    "password": {
+      "required": "密码不能为空"
+    }
+  }
+}

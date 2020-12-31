@@ -1,0 +1,16 @@
+{
+  "systemLogin": "System Login",
+  "username": "username",
+  "password": "password",
+  "usernamePlaceholder": "Please enter the user name",
+  "passwordPlaceholder": "Please enter the password",
+  "login": "Login",
+  "error-tip": {
+    "username": {
+      "required": "The username cannot be empty"
+    },
+    "password": {
+      "required": "The password cannot be empty"
+    }
+  }
+}

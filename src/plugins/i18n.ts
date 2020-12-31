@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 import zhCN from '@/lang/zh-cn'
+import Store from '@/store'
 
 Vue.use(VueI18n)
 
@@ -21,7 +22,7 @@ const loadedLanguages: string[] = ['zh-cn']
 function setLanguage (lang: string) {
   i18n.locale = lang
   document.querySelector('html')!.setAttribute('lang', lang)
-  localStorage.setItem('lang', lang)
+  Store.dispatch('app/setLanguage', lang)
   return lang
 }
 
@@ -29,7 +30,7 @@ function setLanguage (lang: string) {
 function loadLanguageAsync (lang: string) {
   if (i18n.locale !== lang) {
     if (!loadedLanguages.includes(lang)) {
-      return import(/* webpackChunkName: "lang-[request]" */ `@/lang/${lang}`)
+      return import(/* webpackChunkName: "lang-[request]" */ `@/lang/${lang}.ts`)
         .then((msg) => {
           i18n.setLocaleMessage(lang, msg.default)
           loadedLanguages.push(lang)
@@ -46,7 +47,7 @@ function loadLanguageAsync (lang: string) {
 Vue.prototype.$setLang = loadLanguageAsync
 
 // 获取localstorage中的语言，如果不存在，获取浏览器的当前语言
-const locale = localStorage.getItem('lang') || navigator.language.toLocaleLowerCase()
+const locale = Store.state.app.lang
 
 // 设置语言，如果失败则设置为默认的zh-cn
 // 也可以在这里放一个请求，把没有的语言发送到后台统计

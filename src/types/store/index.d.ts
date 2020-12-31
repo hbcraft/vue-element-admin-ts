@@ -1,1 +1,4 @@
-interface RootState {}
+interface RootState {
+  app: AppState;
+  user: UserState;
+}

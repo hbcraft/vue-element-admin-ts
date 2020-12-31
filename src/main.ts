@@ -4,9 +4,11 @@ import router from '@/router'
 import store from '@/store'
 
 import i18n from '@/plugins/i18n'
+import 'normalize.css'
 import '@/plugins/element'
 import '@/plugins/axios'
 import '@/components/global'
+import '@/plugins/icons'
 import '@/style/global.scss'
 
 Vue.config.productionTip = false
