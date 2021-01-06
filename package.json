@@ -1,6 +1,6 @@
 {
   "name": "attendance",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -8,7 +8,8 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/lang/**/*.json'"
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/lang/**/*.json'",
+    "changelog": "conventional-changelog -i docs/CHANGELOG.md -s -r 0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
