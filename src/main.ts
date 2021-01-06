@@ -8,8 +8,10 @@ import 'normalize.css'
 import '@/plugins/element'
 import '@/plugins/axios'
 import '@/components/global'
-import '@/plugins/icons'
+import '@/icons/index'
 import '@/style/global.scss'
+
+import '@/polyfill/mouseevent.path'
 
 Vue.config.productionTip = false
 

@@ -3,7 +3,7 @@
 
 <template>
   <div id="login" class="fill-height d-flex jc-center ai-center">
-    <el-card
+    <card
       body-class="d-flex jc-center ai-center posi-rel"
       :bodyStyle="{ backgroundColor: '#fff' }"
       :style="{
@@ -51,7 +51,7 @@
           </el-button>
         </el-form>
       </div>
-    </el-card>
+    </card>
   </div>
 </template>
 
