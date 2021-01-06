@@ -10,7 +10,7 @@ import '@/plugins/axios'
 import '@/components/global'
 import '@/icons/index'
 import '@/style/global.scss'
-
+import '@/utils/resetVueData'
 import '@/polyfill/mouseevent.path'
 
 Vue.config.productionTip = false

@@ -1,6 +1,7 @@
 import Cookies from 'js-cookie'
 import { ActionTree, Module, MutationTree } from 'vuex'
 import { getLangs } from '@/utils/lang'
+import { RootState } from '@/types/store'
 
 const state: AppState = {
   lang: Cookies.get('lang') || 'zh-cn',

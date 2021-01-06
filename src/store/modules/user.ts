@@ -1,6 +1,7 @@
 import { ActionTree, Module, MutationTree } from 'vuex'
 import { LoginAPI } from '@/api/user'
 import { setToken, getToken } from '@/utils/auth'
+import { RootState } from '@/types/store'
 
 const state: UserState = {
   token: getToken() || ''

@@ -5,7 +5,8 @@ const routes: RouteConfig[] = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "Login" */'@/views/login/index.vue')
+    component: () => import(/* webpackChunkName: "Login" */'@/views/login/index.vue'),
+    hidden: true
   },
   {
     path: '/',
@@ -18,7 +19,10 @@ const routes: RouteConfig[] = [
       {
         path: '/dashboard',
         name: 'Dashboard',
-        component: () => import(/* webpackChunkName: "Dashboard" */'@/views/dashboard/index.vue')
+        component: () => import(/* webpackChunkName: "Dashboard" */'@/views/dashboard/index.vue'),
+        meta: {
+          title: 'dashboard'
+        }
       }
     ]
   }
