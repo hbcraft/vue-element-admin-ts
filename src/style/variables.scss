@@ -1,13 +1,24 @@
 // scss变量
 
-// 登录页
 // 登录页的背景颜色
 $loginPageBackgroundColor: #77ccee;
 
 // aside
-$asideWidth: 210px;
+$sidebarBg: #304156;
+$sidebarMenuBg: #304156;
+$sidebarMenuTextColor: #bfcbd9;
+$sidebarMenuActiveTextColor: #409EFF;
+$sidebarSubMenuBgColor: #1f2d3d;
+$sidebarSubMenuHoverBgColor: #001528;
+$sidebarWidth: 210px;
 
 :export {
   loginPageBackgroundColor: $loginPageBackgroundColor;
-  asideWidth: $asideWidth;
+  sidebarBg: $sidebarBg;
+  sidebarMenuBg: $sidebarMenuBg;
+  sidebarMenuTextColor: $sidebarMenuTextColor;
+  sidebarMenuActiveTextColor: $sidebarMenuActiveTextColor;
+  sidebarSubMenuBgColor: $sidebarSubMenuBgColor;
+  sidebarSubMenuHoverBgColor: $sidebarSubMenuHoverBgColor;
+  sidebarWidth: $sidebarWidth;
 }

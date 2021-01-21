@@ -11,6 +11,8 @@ declare module 'vue-router/types/router' {
   interface _RouteConfigBase {
     hidden?: boolean; // 在菜单中隐藏
     meta?: RouteMeta; // 元数据
+    noShowingChildren?: boolean;
+    alwaysShow?: boolean;
   }
 }
 
@@ -19,4 +21,5 @@ interface RouteMeta {
   icon?: string; // 菜单图标
   affix?: boolean; // 显示在tags-view中
   breadcrumb?: boolean; // 显示在面包屑中
+  activeMenu?: string;
 }

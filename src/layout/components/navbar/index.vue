@@ -8,6 +8,7 @@
     />
     <Space />
     <HeaderSearch />
+    <lang-select />
   </div>
 </template>
 

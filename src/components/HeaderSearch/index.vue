@@ -13,6 +13,7 @@
       remote
       class="header-search-select"
       ref="HeaderSearchSelectEl"
+      :placeholder="$t('enterToSearch')"
       :class="{ show }"
       :remote-method="querySearch"
       @change="selectPage"

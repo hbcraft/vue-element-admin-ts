@@ -11,12 +11,24 @@ h2 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .fill-height {
   height: 100%;
 }
 
 .fill-width {
   width: 100%;
+}
+
+.over-hidden {
+  overflow: hidden;
+}
+
+.overx-hidden {
+  overflow-x: hidden !important;
 }
 
 .d-block {

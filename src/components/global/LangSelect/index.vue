@@ -1,8 +1,8 @@
 <template>
   <el-dropdown @command="setAppLang">
-    <span>
-      <fa-icon icon="language" size="2x" command="" />
-    </span>
+    <div class="fill-height d-flex jc-center ai-center px-10">
+      <fa-icon icon="language" size="2x" />
+    </div>
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item
         v-for="lang in langs"

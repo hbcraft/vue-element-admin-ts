@@ -2,5 +2,6 @@ export {
   faLanguage,
   faIndent,
   faOutdent,
-  faSearch
+  faSearch,
+  faTachometerAlt
 } from '@fortawesome/free-solid-svg-icons'
